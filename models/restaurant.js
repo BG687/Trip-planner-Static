@@ -1,5 +1,6 @@
 var Sequelize = require('sequelize');
 var db = require('./db');
+var Place = require('./place');
 
 var Restaurant = db.define('restaurant', {
   name : {
@@ -29,5 +30,7 @@ var Restaurant = db.define('restaurant', {
     }
   }
 });
+
+Restaurant.belongsTo(Place);
 
 module.exports = Restaurant;

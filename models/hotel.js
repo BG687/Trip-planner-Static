@@ -33,5 +33,6 @@ var Hotel = db.define('hotel', {
   }
 });
 
+Hotel.belongsTo(Place);
 
 module.exports = Hotel;
