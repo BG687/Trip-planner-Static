@@ -2,84 +2,84 @@
 
 {% block content %}
 
-<div class ="container">
-<div class ="row">
-<div class = "topbox">
-  <div class = "hotels">
-      <label for"hotels">Hotels</label>
-      <select>
-        {% for hotel in hotels %}
-          <option>
-          {{ hotel.name }}
-          </option>
-        {% endfor %}
-      </select>
-    </div>
-
-
-  <div class="restaurants">
-    <label for"restaurants">Restaurants</label>
-    <select>
-      {% for restaurant in restaurants %}
-        <option>
-        {{ restaurant.name }}
-        </option>
-      {% endfor %}
-    </select>
-  </div>
-
-
-  <div class="activities">
-    <label for"activites">Activity</label>
-    <select>
-      {% for activity in activities %}
-        <option>
-        {{ activity.name }}
-        </option>
-      {% endfor %}
-    </select>
-  </div>
-
-</div>
 
 <div class ="container">
-<div class ="row">
-<div class = "bottombox">
-  <div class = "Myhotel">
-      <label for"Myhotel">My Hotel</label>
-      <select>
-        {% for hotel in hotels %}
+  <div class ="row">
+    <div class="col-lg-9">
+    map goes here
+    </div>
+    <div class="col-lg-3">
+    <!-- top row (fka topbox) -->
+      <div class="topbox">
+        <div class = "hotels">
+            <label for"hotels">Hotels</label>
+            <select>
+              {% for hotel in hotels %}
+                <option>
+                {{ hotel.name }}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+
+        <div class="restaurants">
+          <label for"restaurants">Restaurants</label>
+          <select>
+            {% for restaurant in restaurants %}
+              <option>
+              {{ restaurant.name }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="activities">
+          <label for"activites">Activity</label>
+          <select>
+            {% for activity in activities %}
+              <option>
+              {{ activity.name }}
+              </option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <div class ="bottombox">
+    <!-- bottom row (fka bottombox) -->
+      <div class = "Myhotel">
+        <label for"Myhotel">My Hotel</label>
+        <select>
+          {% for hotel in hotels %}
+            <option>
+            {{ hotel.name }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="Myrestaurants">
+        <label for"Myrestaurants">My Restaurants</label>
+        <select>
+        {% for restaurant in restaurants %}
           <option>
-          {{ hotel.name }}
+          {{ restaurant.name }}
           </option>
         {% endfor %}
-      </select>
+        </select>
+      </div>
+
+      <div class="Myactivities">
+         <label for"Myactivites">My Activities</label>
+        <select>
+          {% for activity in activities %}
+            <option>
+            {{ activity.name }}
+            </option>
+          {% endfor %}
+        </select>
+       </div>
     </div>
-
-
-  <div class="Myrestaurants">
-    <label for"Myrestaurants">My Restaurants</label>
-    <select>
-      {% for restaurant in restaurants %}
-        <option>
-        {{ restaurant.name }}
-        </option>
-      {% endfor %}
-    </select>
   </div>
-
-
-  <div class="Myactivities">
-    <label for"Myactivites">My Activities</label>
-    <select>
-      {% for activity in activities %}
-        <option>
-        {{ activity.name }}
-        </option>
-      {% endfor %}
-    </select>
-  </div>
-
 </div>
-
 {% endblock %}

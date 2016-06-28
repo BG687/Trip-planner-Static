@@ -1,17 +1,57 @@
-
+body {
+  background-color: gray;
+}
 .row {
-float: right;
-clear: right;
+  clear: right;
 }
 
 .container{
-  padding-bottom: 100px;
-  float: right;
-  background-color: blue;
+  background-color: white;
+  clear: right;
 }
 
-.topbox{
-  background-color: purple; 
-  font-weight: bold; 
+.topbox {
+  background-color: brown;
+  padding-bottom: 100px;
+  font-weight: bold;
   float:right;
+}
+
+.bottombox {
+  background-color: orange;
+  font-weight: bold;
+  float:right;
+}
+
+.row::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+@media screen and (min-width: 300px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      float : left;
+      width : $i / 12 * 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      float : left;
+      width : $i / 12 * 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      float : left;
+      width : $i / 12 * 100%;
+    }
+  }
 }
