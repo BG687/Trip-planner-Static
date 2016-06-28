@@ -5,11 +5,12 @@
 
 <div class ="container">
   <div class ="row">
-    <div class="col-lg-9">
-    map goes here
+    <div class="col-lg-9" id="map-canvas">
     </div>
     <div class="col-lg-3">
     <!-- top row (fka topbox) -->
+      <div class="panel panel-default">
+  <div class="panel-body">
       <div class="topbox">
         <div class = "hotels">
             <label for"hotels">Hotels</label>
@@ -44,42 +45,37 @@
           </select>
         </div>
       </div>
-
+      </div>
+    </div>
+     <div class="panel panel-default">
+  <div class="panel-body">Day's Agenda
       <div class ="bottombox">
     <!-- bottom row (fka bottombox) -->
+   <div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default btn-sm">1</button>
+  <button type="button" class="btn btn-default btn-sm">2</button>
+  <button type="button" class="btn btn-default btn-sm">3</button>
+</div>
       <div class = "Myhotel">
         <label for"Myhotel">My Hotel</label>
-        <select>
-          {% for hotel in hotels %}
-            <option>
-            {{ hotel.name }}
-            </option>
-          {% endfor %}
-        </select>
+        <p>
+          The Ritz<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></p>
       </div>
 
       <div class="Myrestaurants">
         <label for"Myrestaurants">My Restaurants</label>
-        <select>
-        {% for restaurant in restaurants %}
-          <option>
-          {{ restaurant.name }}
-          </option>
-        {% endfor %}
-        </select>
+        <p>
+          Mulberry & Vine<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></p>
       </div>
 
       <div class="Myactivities">
          <label for"Myactivites">My Activities</label>
-        <select>
-          {% for activity in activities %}
-            <option>
-            {{ activity.name }}
-            </option>
-          {% endfor %}
-        </select>
+        <p>
+          Visit the NYSE<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></p>
        </div>
     </div>
   </div>
 </div>
+   </div>
+    </div>
 {% endblock %}

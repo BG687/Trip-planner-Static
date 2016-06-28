@@ -1,32 +1,57 @@
 body {
-  background-color: gray;
+background-color: black; 
 }
 .row {
-  clear: right;
 }
 
 .container{
-  background-color: white;
   clear: right;
+  background-color: black;
+  font-size: 12px;
+  font-style: oblique;
 }
 
 .topbox {
-  background-color: brown;
-  padding-bottom: 100px;
+  background-color: white;
+  padding-bottom: 20px;
   font-weight: bold;
-  float:right;
+  border-radius: 1px;
+  border: 1px;
+  border-color: black;
 }
 
 .bottombox {
-  background-color: orange;
+  background-color: white;
   font-weight: bold;
-  float:right;
 }
 
+select{
+  min-width: 90%;
+  max-width: 90%;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+p{ 
+  font-weight: normal
+}
+
+label{
+  display: block;
+  color: gray;
+}
+.nav {
+  background-color: white;
+}
 .row::after{
   content: "";
   clear: both;
   display: block;
+}
+
+#map-canvas {
+  height: 65vh;
+  display:block;
 }
 
 @media screen and (min-width: 300px) {
@@ -55,3 +80,4 @@ body {
     }
   }
 }
+
