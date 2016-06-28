@@ -15,7 +15,13 @@ router.get('/', function(req, res, next){
   })*/
   Promise.all([activities.findAll({}), hotels.findAll({}), places.findAll({}), restaurants.findAll({})])
   .then(function(result){
-    res.send(result);
+    //res.send(result[3]);
+    res.render('index', {
+      activities : result[0],
+      hotels : result[1],
+      places : result[2],
+      restaurants : result[3]
+    })
   })
   .catch(console.error);
 
@@ -26,7 +32,7 @@ router.get('/about', function(req, res, next){
 
 
 
-	res.render('about', {});
+  res.render('about', {});
 });
 
 
@@ -34,7 +40,7 @@ router.get('/contact', function(req, res, next){
 
 
 
-	res.render('contact', {});
+  res.render('contact', {});
 });
 
 

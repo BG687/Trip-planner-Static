@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div style="float: right">
+  <div style="display: block">
+    <label for"hotels">Hotels</label>
+    <select>
+      {% for hotel in hotels %}
+        <option>
+        {{ hotel.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div style="display: block">
+    <label for"restaurants">Restaurants</label>
+    <select>
+      {% for restaurant in restaurants %}
+        <option>
+        {{ restaurant.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+
+  <div style="display: block">
+    <label for"activites">Activity</label>
+    <select>
+      {% for activity in activities %}
+        <option>
+        {{ activity.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+</div>
+{% endblock %}

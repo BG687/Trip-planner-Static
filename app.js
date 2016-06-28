@@ -11,8 +11,10 @@ app.engine('html', swig.renderFile); // how to render html templates
 app.set('view engine', 'html'); // what file extension do our templates have
 app.set('views', path.join(__dirname, '/views')); // where to find the views
 swig.setDefaults({ cache: false });
-
 app.use(morgan('dev'));
+
+app.use('/bootstrap/', express.static(path.join(__dirname, '/node_modules/bootstrap/dist')));
+app.use('/jquery/', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 
 app.use('/', routes);
 

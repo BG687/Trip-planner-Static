@@ -12,7 +12,6 @@ var Activity = db.define('activity', {
   }
 });
 
-
 Activity.belongsTo(Place);
 
  module.exports = Activity

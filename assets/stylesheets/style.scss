@@ -1,0 +1,26 @@
+@media screen and (min-width: 300px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      float : left;
+      width : $i / 12 * 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      float : left;
+      width : $i / 12 * 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      float : left;
+      width : $i / 12 * 100%;
+    }
+  }
+}
