@@ -2,19 +2,22 @@
 
 {% block content %}
 
-<div style="float: right">
-  <div style="display: block">
-    <label for"hotels">Hotels</label>
-    <select>
-      {% for hotel in hotels %}
-        <option>
-        {{ hotel.name }}
-        </option>
-      {% endfor %}
-    </select>
-  </div>
+<div class ="container">
+<div class ="row">
+<div class = "topbox">
+  <div class = "hotels">
+      <label for"hotels">Hotels</label>
+      <select>
+        {% for hotel in hotels %}
+          <option>
+          {{ hotel.name }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
 
-  <div style="display: block">
+
+  <div class="restaurants">
     <label for"restaurants">Restaurants</label>
     <select>
       {% for restaurant in restaurants %}
@@ -26,7 +29,7 @@
   </div>
 
 
-  <div style="display: block">
+  <div class="activities">
     <label for"activites">Activity</label>
     <select>
       {% for activity in activities %}
@@ -38,4 +41,45 @@
   </div>
 
 </div>
+
+<div class ="container">
+<div class ="row">
+<div class = "bottombox">
+  <div class = "Myhotel">
+      <label for"Myhotel">My Hotel</label>
+      <select>
+        {% for hotel in hotels %}
+          <option>
+          {{ hotel.name }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+
+
+  <div class="Myrestaurants">
+    <label for"Myrestaurants">My Restaurants</label>
+    <select>
+      {% for restaurant in restaurants %}
+        <option>
+        {{ restaurant.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+
+  <div class="Myactivities">
+    <label for"Myactivites">My Activities</label>
+    <select>
+      {% for activity in activities %}
+        <option>
+        {{ activity.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+</div>
+
 {% endblock %}
